@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oboshie's Sewing Class - Our Works</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Inter'] bg-white text-[#1A1C30]">
+    <!-- Navigation Bar -->
+    <nav class="bg-[#1A1C30] text-white py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">Oboshie's Sewing Class</div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="hover:text-[#E42D45] transition-colors">FAQs</a>
+                <a href="works.html" class="hover:text-[#E42D45] transition-colors">Our Works</a>
+                <button id="nav-enroll-btn" class="bg-[#E42D45] hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors">Enroll Now!</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#1A1C30] to-[#445878] text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Creative Works</h1>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Explore the beautiful creations crafted by our talented students and instructors. See what you can learn to create!</p>
+            <button id="hero-enroll-btn" class="bg-[#E42D45] hover:bg-red-600 text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors">Enroll Now!</button>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="py-12 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Featured Creations</h2>
+            <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video items will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1C30] text-white py-10 px-6">
+        <div class="container mx-auto text-center">
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-4">Oboshie's Sewing Class</h3>
+                <p class="max-w-2xl mx-auto">Learn the art of sewing from expert instructors. Join our classes to create beautiful garments and express your creativity.</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-[#E42D45] transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-[#E42D45] transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-[#E42D45] transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+            <p>&copy; 2023 Oboshie's Sewing Class. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Modal -->
+    <div id="whatsapp-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Enroll Now</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="whatsapp-form">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                </div>
+                <div class="mb-4">
+                    <label for="interest" class="block text-gray-700 mb-2">Select Interest</label>
+                    <select id="interest" name="interest" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                        <option value="">Select an option</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Class Enrollment">Class Enrollment</option>
+                        <option value="Curriculum Details">Curriculum Details</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#E42D45] hover:bg-red-600 text-white py-3 rounded-md font-semibold transition-colors">Send via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full mx-4 overflow-hidden">
+            <div class="relative">
+                <button id="close-video-modal" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 z-10">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="video-container" class="relative pb-[56.25%] h-0 overflow-hidden">
+                    <!-- Video will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 id="video-title" class="text-2xl font-bold mb-2"></h3>
+                <p id="video-description" class="text-gray-700 mb-6"></p>
+                <div class="flex space-x-4">
+                    <button id="share-facebook" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">
+                        <i class="fab fa-facebook-f mr-2"></i> Share
+                    </button>
+                    <button id="share-twitter" class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-md transition-colors">
+                        <i class="fab fa-twitter mr-2"></i> Tweet
+                    </button>
+                    <button id="copy-link" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors">
+                        <i class="fas fa-link mr-2"></i> Copy Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oboshie's Sewing Class - FAQs</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Inter'] bg-white text-[#1A1C30]">
+    <!-- Navigation Bar -->
+    <nav class="bg-[#1A1C30] text-white py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">Oboshie's Sewing Class</div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="hover:text-[#E42D45] transition-colors">FAQs</a>
+                <a href="works.html" class="hover:text-[#E42D45] transition-colors">Our Works</a>
+                <button id="nav-enroll-btn" class="bg-[#E42D45] hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors">Enroll Now!</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#1A1C30] to-[#445878] text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Master the Art of Sewing</h1>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Find answers to common questions about our sewing classes and discover the creative possibilities that await you.</p>
+            <button id="hero-enroll-btn" class="bg-[#E42D45] hover:bg-red-600 text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors">Enroll Now!</button>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-10 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-3xl">
+            <div class="relative">
+                <input type="text" id="faq-search" placeholder="Search for questions..." class="w-full p-4 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+            <p class="text-center mt-4 text-gray-600">Can't find what you're looking for? <a href="#" class="text-[#E42D45] hover:underline">Contact us</a></p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div id="faq-container" class="space-y-4">
+                <!-- FAQ items will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1C30] text-white py-10 px-6">
+        <div class="container mx-auto text-center">
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-4">Oboshie's Sewing Class</h3>
+                <p class="max-w-2xl mx-auto">Learn the art of sewing from expert instructors. Join our classes to create beautiful garments and express your creativity.</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-[#E42D45] transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-[#E42D45] transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-[#E42D45] transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+            <p>&copy; 2023 Oboshie's Sewing Class. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Modal -->
+    <div id="whatsapp-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Enroll Now</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="whatsapp-form">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                </div>
+                <div class="mb-4">
+                    <label for="interest" class="block text-gray-700 mb-2">Select Interest</label>
+                    <select id="interest" name="interest" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]">
+                        <option value="">Select an option</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Class Enrollment">Class Enrollment</option>
+                        <option value="Curriculum Details">Curriculum Details</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42D45]"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#E42D45] hover:bg-red-600 text-white py-3 rounded-md font-semibold transition-colors">Send via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
